@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="LensScape Photography Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LensScape Photography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>LensScape Photography</h1>
+    <p>Capturing Moments, Telling Stories</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Nature</a>
+    <a href="#">Portrait</a>
+    <a href="#">Travel</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Explore the World Through My Lens</h2>
+
+    <p id="quote">“Photography is the story I fail to put into words.”</p>
+    <small id="author">– Destin Sparks</small>
+
+    <br><br>
+    <button onclick="scrollToGallery()">View Gallery</button>
+</section>
+
+<!-- WELCOME -->
+<section class="welcome">
+    <h2>Welcome</h2>
+    <p>This portfolio showcases creative photography across nature, portraits, and travel experiences.</p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+
+    <img src="nature.jpg" alt="Nature">
+    <img src="portrait.jpg" alt="Portrait">
+    <img src="travel.jpg" alt="Travel">
+    <img src="city.jpg" alt="City">
+    <img src="night.jpg" alt="Night">
+    <img src="people.jpg" alt="People">
+    <img src="mountain.jpg" alt="Mountain">
+    <img src="street.jpg" alt="Street">
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 LensScape Photography</p>
+</footer>
+
+<script>
+function scrollToGallery() {
+    document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+}
+
+const quotes = [
+{ text: "Photography is the story I fail to put into words.", author: "Destin Sparks" },
+{ text: "A picture is worth a thousand words.", author: "Fred R. Barnard" },
+{ text: "Photography is the only language that can be understood anywhere in the world.", author: "Bruno Barbey" },
+{ text: "In photography there is a reality so subtle that it becomes more real than reality.", author: "Alfred Stieglitz" },
+{ text: "Taking pictures is savoring life intensely.", author: "Marc Riboud" },
+{ text: "Your first 10,000 photographs are your worst.", author: "Henri Cartier-Bresson" },
+{ text: "Photography takes an instant out of time.", author: "Dorothea Lange" },
+{ text: "A photograph is a secret about a secret.", author: "Diane Arbus" },
+{ text: "The best thing about a picture is that it never changes.", author: "Andy Warhol" },
+{ text: "There are always two people in every picture.", author: "Ansel Adams" },
+{ text: "Photography is truth.", author: "Jean-Luc Godard" },
+{ text: "To me, photography is an art of observation.", author: "Elliott Erwitt" },
+{ text: "A good photograph is knowing where to stand.", author: "Ansel Adams" },
+{ text: "You don’t take a photograph, you make it.", author: "Ansel Adams" },
+{ text: "The camera is an instrument that teaches people how to see.", author: "Dorothea Lange" },
+{ text: "Photography helps people to see.", author: "Berenice Abbott" },
+{ text: "A photograph is the pause button of life.", author: "Ty Holland" },
+{ text: "Great photography is about depth of feeling.", author: "Peter Adams" },
+{ text: "The eye should learn to listen before it looks.", author: "Robert Frank" },
+{ text: "Photography is a way of feeling, of touching, of loving.", author: "Aaron Siskind" }
+];
+
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % quotes.length;
+    document.getElementById("quote").innerText = "“" + quotes[index].text + "”";
+    document.getElementById("author").innerText = "– " + quotes[index].author;
+}, 10000);
+</script>
+
+</body>
+</html>
