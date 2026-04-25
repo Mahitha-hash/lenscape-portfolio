@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="LensScape Photography Portfolio">
+    <meta name="keywords" content="photography, portfolio, travel, nature, portrait, gallery">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LensScape Photography</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE ANALYTICS (REPLACE G-XXXX WITH YOUR REAL ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-P7VDQ8RH5F');
+    </script>
 </head>
 
 <body>
@@ -16,12 +27,11 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Nature</a>
-    <a href="#">Portrait</a>
-    <a href="#">Travel</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="nature.html">Nature</a>
+    <a href="portrait.html">Portrait</a>
+    <a href="travel.html">Travel</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <main>
@@ -40,27 +50,67 @@
 <!-- WELCOME -->
 <section class="welcome">
     <h2>Welcome</h2>
-    <p>This portfolio showcases creative photography across nature, portraits, and travel experiences.</p>
+    <p>This portfolio showcases creative photography across real locations around the world. Each image tells a story through light, emotion, and perspective.</p>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery" class="gallery">
     <h2>Gallery</h2>
 
-    <img src="nature.jpg" alt="Nature">
-    <img src="portrait.jpg" alt="Portrait">
-    <img src="travel.jpg" alt="Travel">
-    <img src="city.jpg" alt="City">
-    <img src="night.jpg" alt="Night">
-    <img src="people.jpg" alt="People">
-    <img src="mountain.jpg" alt="Mountain">
-    <img src="street.jpg" alt="Street">
+    <div class="image-box">
+        <img src="travel.jpg" alt="City view in Seoul">
+        <p>📍 Seoul, South Korea | City</p>
+    </div>
+
+    <div class="image-box">
+        <img src="mountain.jpg" alt="Araku Valley mountains">
+        <p>📍 Araku Valley, India | Nature</p>
+    </div>
+
+    <div class="image-box">
+        <img src="nature.jpg" alt="Munnar hills landscape">
+        <p>📍 Munnar, India | Landscape</p>
+    </div>
+
+    <div class="image-box">
+        <img src="portrait.jpg" alt="Portrait photography in South India">
+        <p>📍 South India | Portrait</p>
+    </div>
+
+    <div class="image-box">
+        <img src="people.jpg" alt="People in London street">
+        <p>📍 London, UK | Lifestyle</p>
+    </div>
+
+    <div class="image-box">
+        <img src="street.jpg" alt="Rural India street scene">
+        <p>📍 Rural India | Street</p>
+    </div>
+
+    <div class="image-box">
+        <img src="city.jpg" alt="Venice canals">
+        <p>📍 Venice, Italy | Travel</p>
+    </div>
+
+    <div class="image-box">
+        <img src="night.jpg" alt="Night city in USA">
+        <p>📍 United States | Night</p>
+    </div>
 
 </section>
 
 </main>
 
 <footer>
+    <p>📧 Contact: <a href="mailto:mkakarak@asu.edu">mkakarak@asu.edu</a></p>
+
+    <!-- REQUIRED EXTERNAL LINK -->
+    <p>
+        <a href="https://www.nationalgeographic.com" target="_blank">
+            Visit National Geographic
+        </a>
+    </p>
+
     <p>© 2026 LensScape Photography</p>
 </footer>
 
@@ -69,6 +119,7 @@ function scrollToGallery() {
     document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
 }
 
+// Quotes rotation
 const quotes = [
 { text: "Photography is the story I fail to put into words.", author: "Destin Sparks" },
 { text: "A picture is worth a thousand words.", author: "Fred R. Barnard" },
@@ -98,7 +149,7 @@ setInterval(() => {
     index = (index + 1) % quotes.length;
     document.getElementById("quote").innerText = "“" + quotes[index].text + "”";
     document.getElementById("author").innerText = "– " + quotes[index].author;
-}, 10000);
+}, 20000);
 </script>
 
 </body>
